@@ -16,7 +16,7 @@
 
 - **仓库即技能**：仓库根目录即技能目录，安装 = 软链/拷贝到 `~/.pi/agent/skills/document-style/`
 - **跨 harness**：按 agentskills.io 标准编写，pi / Claude Code / Codex 通用
-- **model-invoked**：description 带触发词，agent 遇到中文技术文档自动调用
+- **user-invoked**：`/skill:document-style` 手动触发（`disable-model-invocation: true`，description 为一行人类摘要）
 - **一个技能三分支**：评估（报告）/ 修改（全文）/ 更新（落盘），共享同一套主规范
 - **v1 纯提示词**：无脚本零依赖；脚本化检查（正则扫描）留作 v2 演进
 - **主规范唯一**：冲突以仓库为准，外部指南只作溯源（ADR-0001）
