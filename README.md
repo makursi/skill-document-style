@@ -1,33 +1,14 @@
-# document-style — 中文技术文档写作规范 Agent Skill
+# document-style
 
-让 Agent 按中文技术文档写作规范，对用户的中文技术文档进行**校对**（评估、修改、更新）。
+An Agent skill that **proofreads** Chinese technical documentation against a Chinese technical writing style guide: **audit** (per-violation report), **revise** (corrected full text), **update** (edit files in place).
 
-## 技能本体
+## Key Features
 
-| 文件 | 作用 |
-|------|------|
-| [`SKILL.md`](SKILL.md) | 技能入口：三个分支（评估/修改/更新）与流程、完成判据 |
-| [`references/rules.md`](references/rules.md) | **主规范**：6 模块规则唯一事实源（规则 ID、严重级、正误示例、检查提示） |
-| [`references/provenance.md`](references/provenance.md) | 溯源注记：冲突裁决、外部指南可用状态（不参与判定） |
-| [`CONTEXT.md`](CONTEXT.md) | 领域词汇表（校对、主规范、违规、严重级、例外清单等） |
-| [`docs/adr/`](docs/adr/) | 架构决策记录 |
+- One rule set across 6 modules: titles, text & spacing, paragraphs, numbers, punctuation, document structure & filenames
+- Every rule carries an ID, a severity (error / warning / suggestion), correct & incorrect examples, and a check hint
+- Per-document exception list (`style-exceptions` frontmatter or verbal) for explicit exemptions
+- User-invoked: `/skill:document-style`
 
-## 设计决策（grilling 阶段确定）
+## Rules Source & Credits
 
-- **仓库即技能**：仓库根目录即技能目录，安装 = 软链/拷贝到 `~/.pi/agent/skills/document-style/`
-- **跨 harness**：按 agentskills.io 标准编写，pi / Claude Code / Codex 通用
-- **user-invoked**：`/skill:document-style` 手动触发（`disable-model-invocation: true`，description 为一行人类摘要）
-- **一个技能三分支**：评估（报告）/ 修改（全文）/ 更新（落盘），共享同一套主规范
-- **v1 纯提示词**：无脚本零依赖；脚本化检查（正则扫描）留作 v2 演进
-- **主规范唯一**：冲突以仓库为准，外部指南只作溯源（ADR-0001）
-
-## 安装
-
-```bash
-mkdir -p ~/.pi/agent/skills
-ln -s "$(pwd)" ~/.pi/agent/skills/document-style   # 或拷贝
-```
-
-## 素材
-
-原始研究材料在 `output/`（**不入库**，已被 .gitignore 排除）：仓库规则原文 + 12 个外部链接的联网检索记录。
+The writing conventions come from [makursi/document-style-guide](https://github.com/makursi/document-style-guide), a fork of [ruanyf/document-style-guide](https://github.com/ruanyf/document-style-guide) (public domain). The 12 external guides it references are documented in `references/provenance.md`.
