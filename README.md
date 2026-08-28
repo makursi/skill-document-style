@@ -11,4 +11,4 @@ An Agent skill that **proofreads** Chinese technical documentation against a Chi
 
 ## Rules Source & Credits
 
-The writing conventions come from [makursi/document-style-guide](https://github.com/makursi/document-style-guide), a fork of [ruanyf/document-style-guide](https://github.com/ruanyf/document-style-guide) (public domain). The 12 external guides it references are documented in `references/background-provenance.md`.
+The writing conventions come from [makursi/document-style-guide](https://github.com/makursi/document-style-guide), a fork of [ruanyf/document-style-guide](https://github.com/ruanyf/document-style-guide) (public domain). The 12 external guides it references are documented in `references/provenance.md`.
