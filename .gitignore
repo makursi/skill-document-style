@@ -26,3 +26,6 @@ Thumbs.db
 
 # Logs
 *.log
+
+# 拷问迭代工作区（暂不入库）
+iterations/

@@ -1,11 +1,11 @@
 ---
-name: document-style
+name: cn-doc-proofread
 description: 按中文技术文档写作规范校对文档：评估（违规报告）/ 修改（修正全文）/ 更新（改文件落盘）。
 disable-model-invocation: true
 metadata:
   author: makursi
   version: "2026.8.27"
-  source: https://github.com/makursi/skill-document-style
+  source: https://github.com/makursi/skill-cn-doc-proofread
 ---
 
 # 中文技术文档校对

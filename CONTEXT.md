@@ -1,4 +1,4 @@
-# document-style — 中文技术文档校对技能
+# cn-doc-proofread — 中文技术文档校对技能
 
 一个 Agent 技能：按中文技术文档写作规范对用户的中文技术文档进行评估、修改、更新。规范来源为仓库 `apps/document-style-guide`（fork 自 ruanyf/document-style-guide，公共领域）。
 
