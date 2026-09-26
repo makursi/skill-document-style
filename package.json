@@ -1,5 +1,5 @@
 {
-  "name": "cn-doc-proofread",
+  "name": "document-style-skill",
   "version": "0.1.0",
   "private": true,
   "description": "Agent skill: 按中文技术文档写作规范评估、修改、更新用户文档",
